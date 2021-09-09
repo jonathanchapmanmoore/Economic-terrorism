@@ -1,0 +1,30 @@
+
+function piResponse() {
+		piSetCookie('visitor_id378242', '230083914', 3650);
+			piSetCookie('visitor_id378242-hash', '1842d3f821e69bd921abebb42075fc5d442007b38147d1fd0d8de0b19b89a7ef4dde83e1d5d2fd2a16c9e5d07f54ad8e09a7c50b', 3650);
+		
+		if (document.location.protocol != "https:" || (document.location.protocol == "https:" && true)) {
+		var analytics_link = document.location.protocol + "//" + "go.hks.harvard.edu/analytics?";
+		pi.tracker.visitor_id='230083914';
+
+				pi.tracker.visitor_id_sign='1842d3f821e69bd921abebb42075fc5d442007b38147d1fd0d8de0b19b89a7ef4dde83e1d5d2fd2a16c9e5d07f54ad8e09a7c50b';
+		
+				pi.tracker.campaign_id='2187';
+		
+		var variables = 'conly=true';
+		for (property in pi.tracker) {
+					variables += "&" + property + "=" + encodeURIComponent(pi.tracker[property]);
+				}
+		var headID = document.getElementsByTagName("head")[0];
+		piScriptObj[piScriptNum] = document.createElement('script');
+		piScriptObj[piScriptNum].type = 'text/javascript';
+		piScriptObj[piScriptNum].src = analytics_link + variables;
+		headID.appendChild(piScriptObj[piScriptNum]);
+		piScriptObj[piScriptNum].onload = function() { return; }
+	}
+	}
+piResponse();
+
+
+
+
